@@ -17,4 +17,4 @@ RUN gem build git-lfs-s3.gemspec && \
   gem install ./git-lfs-s3-*.gem --no-rdoc --no-ri && \
   bundler install
 
-CMD ruby bin/git-lfs-s3
+CMD bundle exec bin/git-lfs-s3
