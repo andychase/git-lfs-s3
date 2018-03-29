@@ -14,7 +14,7 @@ COPY . /app
 EXPOSE 8080
 
 RUN gem build git-lfs-s3.gemspec && \
-  gem install ./git-lfs-s3-*.gem --no-rdoc --no-ri && \
+  gem install ./lsst-git-lfs-s3-*.gem --no-rdoc --no-ri && \
   bundler install
 
 CMD bundle exec bin/git-lfs-s3
