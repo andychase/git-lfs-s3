@@ -28,11 +28,7 @@ if GitLfsS3::Application.settings.ceph_s3
 end
 
 GitLfsS3::Application.on_authenticate do |username, password, is_safe|
-  if is_safe # Whether the HTTP method is safe (GET, HEAD)
-    true
-  else
-    username == ENV['USERNAME'] && password == ENV['PASSWORD']
-  end
+  true
 end
 
 Rack::Handler::WEBrick.run(
